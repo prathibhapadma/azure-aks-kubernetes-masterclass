@@ -20,11 +20,13 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     ls -R $(System.DefaultWorkingDirectory)
-    cat "**/.md"
+    find $(System.DefaultWorkingDirectory) -name "test.txt"
+    cat "**/test.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cat "$(System.DefaultWorkingDirectory)/**/.sh"
-    cat "$(System.DefaultWorkingDirectory)/**/.md"
+    find $(System.DefaultWorkingDirectory) -name "test.txt"
+    cat "$(System.DefaultWorkingDirectory)/**/test.txt"
+    cat "$(System.DefaultWorkingDirectory)/**/test.txt"
   displayName: 'Run a multi-line script'  
