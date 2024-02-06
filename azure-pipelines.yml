@@ -21,7 +21,7 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo
     ls
-    cat "azure-aks-usermgmt-webapp-demo/azure-aks-usermgmt-webapp-demo/test.txt"
+    cat "azure-aks-usermgmt-webapp-demo/*/test.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
