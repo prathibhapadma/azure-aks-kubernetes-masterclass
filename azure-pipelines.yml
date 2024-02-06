@@ -24,7 +24,8 @@ steps:
     cd ..
     ls -la
     echo list hidden files
-    cat "../test.txt"
+    pwd 
+    cat "test.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
