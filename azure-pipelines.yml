@@ -19,12 +19,10 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo
+    cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo/..
     ls -a
-    cd ..
-    ls -la
-    echo list hidden files
     pwd 
+    echo "Current working directory: $(Agent.BuildDirectory)"
     cat "test.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
