@@ -20,5 +20,10 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     ls -R $(System.DefaultWorkingDirectory)
-    cat "**/git-deploy.sh"
+    cat "**/.md"
   displayName: 'Run a multi-line script'
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    cat "$(System.DefaultWorkingDirectory)/**/.sh"
+    cat "$(System.DefaultWorkingDirectory)/**/.md"
+  displayName: 'Run a multi-line script'  
