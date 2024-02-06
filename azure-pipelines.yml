@@ -22,15 +22,10 @@ steps:
     cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo
     ls -a
     echo list hidden files
-    pwd
-    ls
-    echo list hidden files and list
-    pwd
-    ls -a
-    cat "azure-aks-usermgmt-webapp-demo/../test.txt"
+    cat "/../test.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cat "$(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo/../test.txt"
+    cat "$(System.DefaultWorkingDirectory)/*/../test.txt"
   displayName: 'Run a multi-line script'  
