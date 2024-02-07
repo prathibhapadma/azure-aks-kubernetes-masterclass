@@ -14,9 +14,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    cat "./*.sln"
+  displayName: 'Run a multi-line script'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo/..
@@ -26,7 +27,4 @@ steps:
     cat "*.sln"
   displayName: 'Run a multi-line script'
   continueOnError: true
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    cat "./*.sln"
-  displayName: 'Run a multi-line script'  
+  
