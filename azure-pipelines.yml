@@ -28,6 +28,5 @@ steps:
   continueOnError: true
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cd $(System.DefaultWorkingDirectory)
     cat "./Test.Trade.ReMoS.AssuranceService.API.sln"
   displayName: 'Run a multi-line script'  
