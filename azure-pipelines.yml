@@ -16,15 +16,15 @@ pool:
 steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cat "./*.sln"
-    cat "./*.txt"
+    cd $(System.DefaultWorkingDirectory)
+    cat "Test.Trade.ReMoS.AssuranceService.API.sln"
+    cat "*.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cd $(System.DefaultWorkingDirectory)
-    cat "Test.Trade.ReMoS.AssuranceService.API.sln"
-    cat "file.txt"
+    cat "./*.sln"
+    cat "./*.txt"
   displayName: 'Run a multi-line script'
-  continueOnError: true
+  continueOnError: true  
   
