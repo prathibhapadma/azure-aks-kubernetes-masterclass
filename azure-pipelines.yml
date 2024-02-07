@@ -23,10 +23,10 @@ steps:
     ls -a
     pwd 
       # "Current working directory: $(Agent.BuildDirectory)"
-    cat "Test.Trade.ReMoS.AssuranceService.API.sln"
+    cat "*.sln"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cat "./Test.Trade.ReMoS.AssuranceService.API.sln"
+    cat "./*.sln"
   displayName: 'Run a multi-line script'  
