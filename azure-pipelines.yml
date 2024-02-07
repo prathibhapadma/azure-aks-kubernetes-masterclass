@@ -23,7 +23,7 @@ steps:
     ls -a
     pwd 
       # "Current working directory: $(Agent.BuildDirectory)"
-    cat "*.sln"
+    cat "**.sln"
   displayName: 'Run a multi-line script'
   continueOnError: true
 - script: |
