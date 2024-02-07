@@ -17,14 +17,13 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     cat "./*.sln"
+    cat "./*.txt"
   displayName: 'Run a multi-line script'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    cd $(System.DefaultWorkingDirectory)/azure-aks-usermgmt-webapp-demo/..
-    ls -a
-    pwd 
-      # "Current working directory: $(Agent.BuildDirectory)"
-    cat "*.sln"
+    cd $(System.DefaultWorkingDirectory)
+    cat "Test.Trade.ReMoS.AssuranceService.API.sln"
+    cat "file.txt"
   displayName: 'Run a multi-line script'
   continueOnError: true
   
