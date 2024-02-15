@@ -13,18 +13,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+    - repository: secondRepo
+      type: github
+      name: prathibhapadma/test-demo-api
+      ref: $(Build.SourceBranch)
+      endpoint: github
+
 steps:
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    cd $(System.DefaultWorkingDirectory)
-    cat "Test.Trade.ReMoS.AssuranceService.API.sln"
-    cat "*.txt"
-  displayName: 'Run a multi-line script'
-  continueOnError: true
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    cat "./*.sln"
-    cat "./*.txt"
-  displayName: 'Run a multi-line script'
+    echo Hello.
+  displayName: 'Run a multi-repo'
   continueOnError: true  
   
